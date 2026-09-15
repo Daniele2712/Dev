@@ -1,0 +1,30 @@
+services:
+   mysql:
+        container_name: mysql-bc
+        image: mysql
+        environment: 
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_DB: jwt_db
+        volumes:
+            - mysqli:/var/lib/mysql
+        ports:
+            - 3316:3306
+        networks: 
+            - springnet
+        restart: unless-stopped
+        
+   volumes:
+        mysqli:
+        
+   networks:
+        springnet:
+            driver: bridge
+            
+   mail-dev: 
+        container_name: mail-dev-bc
+        image: maildev/maildev
+        ports:
+            - 1080:1080
+            - 1025:1025
+        

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Desktop/hislide"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "hislide"
+	}
+}

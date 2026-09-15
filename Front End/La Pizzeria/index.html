@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/642805505a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="slide/slide.css">
+    <script src="slide/slide.js" defer></script>
+    <title>La Pizzeria</title>
+</head>
+<body>
+        <header>
+            <nav class="nav">
+                <div class="nav__logo">
+                    <img src="icon/pizza_logo.png" alt="" class="nav__img">
+                    <p class="nav__text">La Pizzeria</p>
+                </div>
+                <ul class="nav__menu no-bullets">
+                    <li class="nav__item active"><a class="nav__item-a" href="#home">Home</a></li>
+                    <li class="nav__item active"><a class="nav__item-a" href="#menu">Menu</a></li>
+                    <li class="nav__item active"><a class="nav__item-a" href="#where">Prenota</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+
+                    <h2>Benvenuti nella mia pizzeria!</h2>
+
+                    <div class="home__gallery">
+                        <img src="img/esterno.jpg" alt="" class="gallery">
+                        <img src="img/interno.jpg" alt="" class="gallery">
+                        <img src="img/personale.JPEG" alt="" class="gallery">
+                    </div>
+
+                    <div class="text-main">
+                        <h2>Chi Siamo</h2>
+                        <p>Pixxa Paxxa è un'accogliente pizzeria situata nel cuore del paese, a gestione familiare,  portiamo avanti la tradizione della pizza Capistrellana con l'originale ricetta tramadandata dalle nostre nonne.</p>
+                        <p>Vieni a trovarci e gustati la nostra fantastica pizza Capistrellana!</p>
+                    </div>
+            </section>
+
+            <section id="menu">
+                <div class="menu__gallery">
+                    <div class="images">
+                        <div class="img1">
+                            <div class="imgContainer">
+                                <div class="imgFadeInBox fadeInEffectDarken"></div>
+                                <img src="img/marinara.jpg" alt="" class="image-ratio">
+                            </div>
+                        </div>
+                        
+                        <div class="img2">
+                            <div class="imgContainer">
+                                <div class="imgFadeInBox fadeInEffectDarken"></div>
+                                <img src="img/salsicciaepatate.jpg" alt="" class="image-ratio">
+                            </div>
+                        </div>
+        
+                        <div class="img3">
+                            <div class="imgContainer">
+                                <div class="imgFadeInBox fadeInEffectLighten"></div>
+                                <img src="img/margherita.jpg" alt="" class="image-ratio">
+                            </div>
+                        </div>
+        
+                        <div class="img4">
+                            <div class="imgContainer">
+                                <div class="imgFadeInBox fadeInEffectDarken"></div>
+                                <img src="img/funghieprosciutto.jpg" alt="" class="image-ratio">
+                            </div>
+                        </div>
+        
+                        <div class="img5">
+                            <div class="imgContainer">
+                                <div class="imgFadeInBox fadeInEffectDarken"></div>
+                                <img src="img/quattroformaggi.jpg" alt="" class="image-ratio">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="leftRightButtons">
+                        <div onclick="moveSliderLeft()" class="leftButton" id="leftButton">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div onclick="moveSliderRight()" class="rightButton" id="rightButton">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__description">
+                    <p class="menu__catch-phrase">Scopri i nostri deliziosi piatti e prenota ora.</p>
+                    <a href="menu.html"><button class="menu__btn">Visualizza il menù</button></a>
+                </div>
+            </section>
+
+            <section id="where">
+                <div class="where__info">
+                    <div class="where__schedule">
+                        <h3>Orari di Apertura</h3>
+                        <div class="where__clock">
+                            <img src="icon/clock.png" alt="" id="icon__clock">
+                            <div class="where__clock-text">
+                                <p><b>Lun-Gio: </b>12:00-21:00</p>
+                                <p><b>Ven-Dom: </b>10:00-24:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="where__contacts">
+                        <h3>Info Contatti</h3>
+                        <div class="where__position">
+                            <img src="icon/location-marker.png" alt="" id="icon__position">
+                            <a class="where__contacts-text" href="https://www.google.com/maps/place/Via+Roma,+98,+67053+Capistrello+AQ/@41.969615,13.394788,16z/data=!4m6!3m5!1s0x132fe5a5c01badf9:0x68553da7a2f21a92!8m2!3d41.969615!4d13.3947884!16s%2Fg%2F11csmj1vqr?hl=it&entry=ttu" target="_blank">Via Roma, 98, 67053 Capistrello AQ
+                            </a>
+                        </div>
+
+                        <div class="where__phone">
+                            <img src="icon/phone.png" alt="" id="icon__phone">
+                            <p>(+39) <a class="where__contacts-text" href="tel:0863 5340326">0863 5340326</a></p>
+                        </div>
+
+                        <div class="where__mail">
+                            <img src="icon/mail.png" alt="" id="icon__mail">
+                            <a class="where__contacts-text" href="mailto:laPizzeria@info.it">laPizzeria@info.it</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="where__maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.4282195078217!2d13.392213475497101!3d41.96961497123185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132fe5afe07aacc5%3A0x3d6f033ec66950b9!2sVia%20Roma%2C%2098%2C%2067053%20Capistrello%20AQ!5e0!3m2!1sit!2sit!4v1710235937801!5m2!1sit!2sit" width="400px" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <footer>
+                <p>&copy; 2024 La Pizzeria. Tutti i diritti riservati.</p>
+            </footer>
+        </main>
+        <button class="theme-toggle"><img src="icon/sun-2.png" alt=""></button>
+    <script src="script.js"></script>
+</body>
+</html>

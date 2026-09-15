@@ -1,0 +1,128 @@
+// you can divide elements in more sass file to mantain the main more readable
+// @import './resets';
+// @import './variables';
+@import './config';
+@import './home';
+@import './menu';
+@import './about';
+@import './projects';
+@import './contact';
+@import './responsive';
+// you can define function like in every other language
+// @function weight($weight-name){
+//     @return map-get($map: $font-weights, $key: $weight-name);
+// }
+// similar to function but they are just to define recurrent style not to compute
+//you can call them inside the style block with @include
+// @mixin flexCenter($direction) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: $direction;
+// }
+// @mixin theme($light-theme: true){
+//     @if $light-theme{
+//         background: lighten($primary-color,100%);
+//         color: darken($text-color,100%);
+//     }
+// }
+// @mixin mobile {
+//     //media query da vedere
+//     @media (max-width: $mobile){
+//         @content;
+//     }
+// }
+
+body{
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+// .main{
+//     @include flexCenter(row);
+//     //you can do calculation simply instead of using calc() like in css, but if you use this you can't mix the type like 80% - 400px
+//     //in that case you have to use calc()
+//     width: 80% - 40%;
+//     margin: 0 auto;
+//     //you can nest object that have the same start name and are nested, the complete name will be main_paragraph
+//     #{&}_paragraph1{
+//         font-weight: weight(regular);
+
+//         &:hover{
+//             color:pink;
+//         }
+//     }
+//     //if the media query give width<chosen width apply this style
+//     @include mobile{
+//         flex-direction: column;
+//     }
+
+//     //if you want to have to p2 the same style of p1 and only minor changes,instead of rewrite everything you can extend
+//     #{&}_paragraph2{
+//         @extend .main_paragraph1;
+
+//         &:hover {
+//             color: $accent-color;
+//         }
+//     }
+// }
+
+
+
+// .light{
+//     @include theme($light-theme: false);
+// }
+
+h1, h2, h3{
+    font-weight: 400;
+}
+
+a{
+    color: set-text-color($primary-color);
+    // text-decoration è per togliere la sottolineatura
+    text-decoration: none;
+}
+
+.text-secondary{
+    color: $secondary-color;
+}
+
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+
+    .social-icons{
+        // position fixed è per tenere un elemento fisso
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        a{
+            padding: 0.4rem;
+            @include transition-ease;
+
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+footer{
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: set-text-color($primary-color);
+} 

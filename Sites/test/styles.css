@@ -1,0 +1,50 @@
+body{
+    margin: 0px;
+    font-family: Montserrat,sans-serif;
+    background: #1a1a1a;
+    color: white;
+}
+
+.border{
+    border: 2px solid white;
+}
+
+#header{
+    width:100%;
+    min-height:50px;
+    display:flex;
+    justify-content: space-between;
+    /* position: fixed; */
+    align-items: center;
+}
+
+#logo{
+    width: 40px;
+    height: 40px;
+}
+
+#headerBtn{
+    display:flex;
+}
+
+#home{
+    display:flex;
+    width: 100%;
+    
+    justify-content: space-between;
+}
+
+#image-home{
+    width: 55%;
+    
+}
+
+#description-home{
+    width:35%;
+}
+
+#projects{}
+
+#aboutMe{}
+
+#contacts{}

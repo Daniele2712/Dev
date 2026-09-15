@@ -1,0 +1,153 @@
+body{
+    background-color: black;
+}
+
+.backgroundCarousel{
+    position: fixed;
+    z-index: 0;
+}
+
+.backgroundImg1,
+.backgroundImg2,
+.backgroundImg3{
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    height: 100vh;
+    width: 300vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1.2s;
+    transition-property: opacity, left, right;
+}
+.backgroundImg1::before,
+.backgroundImg2::before,
+.backgroundImg3::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+}
+.backgroundImg1{
+    background-image: linear-gradient(rgb(0,0,0,0.8), rgb(0,0,0,0.8)), 
+    url('../img/margherita.jpg');
+    opacity: 0;
+    z-index: 100;
+}
+.backgroundImg2{
+    background-image: linear-gradient(rgb(0,0,0,0.8), rgb(0,0,0,0.8)), 
+    url('../img/salsicciaepatate.jpg');
+    opacity: 1;
+    z-index: 200;
+}
+.backgroundImg3{
+    background-image: linear-gradient(rgb(0,0,0,0.8), rgb(0,0,0,0.8)), 
+    url('../img/funghieprosciutto.jpg');
+    opacity: 0;
+    z-index: 100;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+.carousel{
+    position: relative;
+    width: 990px;
+    margin: 100px auto;
+}
+
+.images{
+    position: relative;
+}
+
+.images .img1,
+.images .img2,
+.images .img3{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 450px;
+    width: 300px;
+    perspective: 700px;
+    transform-style: preserve-3d;
+}
+.images .imgContainer{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1.2s;
+    overflow: hidden;
+}
+.images .img1{
+    z-index: 100;
+}
+
+.images .img2{
+    z-index: 150;
+}
+
+.images .img3{
+    z-index: 100;
+}
+.images .img1 .imgContainer{
+    position: absolute;
+    transform: rotateY(40deg) translateX(-280px) scale(0.55);
+}
+.images .img2 .imgContainer{
+    position: absolute;
+    transform: rotateY(0deg) scale(1);
+}
+.images .img3 .imgContainer{
+    position: absolute;
+    transform: rotateY(-40deg) translateX(280px) scale(0.55);
+}
+
+.fadeInEffectDarken{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: black;
+    transition-duration: 1.2;
+    transition-property: opacity, background-color;
+}
+
+.fadeInEffectLighten{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: black;
+    transition-duration: 1.2s;
+    transition-property: opacity, background-color;
+}
+
+.leftRightButtons{
+    position: absolute;
+    top:215px;
+    width: 990px;
+    font-size: 25px;
+    color: #cecece;
+    z-index: 500;
+}
+
+.leftButton,
+.rightButton{
+    cursor: pointer;
+}
+
+.leftButton{
+    position: absolute;
+    left: 50px;
+}
+
+.rightButton{
+    position: absolute;
+    right: 50px;
+}
+
